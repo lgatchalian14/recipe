@@ -1,1 +1,107 @@
-@import url('https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400');
+/*Color Palette Access
+dark gray/black ____________ #0d0d0d
+light gray/white ___________ #f2f2f2
+glacier ____________________ #7abfbf
+glacier, (opacity: 0.5) ____ rgba(122,191,191,0.5)
+orange _____________________ #eb5428
+*/
+
+/* RECIPE STYLES */
+
+/* --------- IMPORT FONT(S) --------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* --------- HTML/DOC --------- */
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+html {
+    background-color: rgba(122,191,191,0.5);
+}
+body {
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    width: 414px;
+}
+
+nav li, menu li {
+    list-style: none;
+}
+nav a, menu a {
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+}
+
+
+/* --------- SIDES --------- */
+#sides {
+    background-color: #7abfbf;
+}
+
+/* >>> RATING / STARS FILL */
+.rating svg {
+    fill: #eb5428;
+}
+#sides .four svg:last-child {
+    fill: #ffffff;
+}
+
+
+
+/* --------- TYPOGRAPHY --------- */
+/* >>> BEBAS NEUE - REG */
+h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+    font-family: 'Bebas Neue', sans-serif;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 25px;
+}
+nav a, nav span, menu li, #social li, footer {
+    font-size: 20px;
+}
+
+/* >>> MONTSERRAT - REG */
+p, dd, li, nav, input, dt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/* >>> MONTSERRAT - BOLD */
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* --------- HIDE --------- */
+.hideThis {
+    visibility: hidden;
+}
+
+
+
+/* --------- MEDIA QUERIES --------- */
+@media screen and (min-width: 834px/*temp*/) {
+    body {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1340px/*temp*/) {
+    body{
+        width: 1280px;
+    }
+}

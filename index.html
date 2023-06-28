@@ -17,6 +17,7 @@
 
             <div id="editGrid">
                 <section id="tacoButtons">
+                    <h2 class="hideThis">Street Tacos</h2> <!--HIDE-->
                     <menu>
                         <li><a href="#save">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EB5428" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -63,7 +64,8 @@
                 </section>            
     
                 <section id="aboutTaco">
-                    <article>
+                    <h3 class="hideThis">About</h3>
+                    <div>
                         <p>
                             Street tacos are delicious, amazing, and oh so mouthwatering! Bite into tender steak, zesty lime flavor 
                             with a hint of spice and add on tomatoes, avocado, and onions for a savory bite you are going to love!
@@ -74,7 +76,7 @@
                             like me, try out these other amazing taco recipes! These taco-stuffed avocados, Baja fish tacos, and 
                             ground beef tacos will not disappoint!!
                         </p>
-                    </article>
+                    </div>
                 </section>
             </div>
 
@@ -299,7 +301,7 @@
              
             <ul id="fullMenu">
                 
-                <div id="menustyle">
+                <div id="menustyle"> <!--code validator error: div not allowed as child of element -- couldn't find out a way to make it correct, without having to change a lot of the code...(pressed on time) -->
                     <input class="hamburger" type="checkbox" id="click">
                     <label class="ham" for="click"><span></span></label>
 
@@ -371,6 +373,7 @@
         </nav>
 
         <section id="searchBar">
+            <h2 class="hideThis">Search Bar</h2>
             <input type="search" id="query" name="q" placeholder="Find a recipe">
 
             <button type="submit">

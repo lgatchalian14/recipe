@@ -176,7 +176,7 @@ label span {
     width: 103.5px;
     flex-direction: column;
 }
-#fullMenu div:first-of-type {
+#fullMenu section:first-of-type {
     display: flex;
     margin: 0;
     padding: 5px 0;
@@ -430,7 +430,7 @@ p {
     background-color: #ffffff;
 }
 footer menu a:hover {
-    border: solid 3px rgba;
+    border: solid 3px #eb5428;
     border-radius: 5px;
 }
 
@@ -753,7 +753,7 @@ footer menu a:hover {
         color: #000000;
     }
     img, svg {
-        filter: grayscale();
+        filter: grayscale(1);
         width: 100%;
         height: auto;
     }

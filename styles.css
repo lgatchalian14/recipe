@@ -24,6 +24,7 @@ html {
 body {
     background-color: #f2f2f2;
     margin: 0 auto;
+    padding-top: 30px;
     width: 414px;
 }
 
@@ -36,12 +37,285 @@ nav a, menu a {
 
 main {
     width: 100%;
+    margin-top: 130px;
+    position: relative;
 }
+
+
+
+/* --------- HEADER --------- */
+header {
+    position: absolute;
+    /* position: fixed; */
+    top: 0px;
+    width: 414px;
+    /* background-color: #ffffff;
+    padding-bottom: -45px;
+    box-shadow: 0 1.5px 0px rgba(0,0,0,0.3); */
+}
+
+/* >>> NAV */
+.nav {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 1.5px 0px rgba(0,0,0,0.4);
+}
+#fullMenu {
+    text-align: center;
+    justify-content: center;
+    padding: 4px 20px;
+}
+#fullMenu, #fullMenu a {
+    display: flex;
+    padding: 0;
+}
+#fullMenu a {
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+}
+#dropdown {
+    position: absolute;
+    margin-top: 77px;
+    left: 0px;
+    text-align: center;
+    width: 25%;
+    box-shadow: 2px 1.5px 0px rgba(0,0,0,0.4);
+}
+#dropdown li {
+    background: #ffffff;
+
+}
+#dropdown a {
+    color: #eb5428;
+    padding: 10px 0;
+    transition: all 0.5s ease-in;
+}
+#navmenu {
+    width: 25%;
+    margin: 0;
+}
+#home {
+    width: 50%;
+    margin: 0;
+    background: #eb5428;
+}
+#home svg {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+#avatar {
+    position: absolute;
+    right: 0px;
+    width: 25%;
+    padding: 5px;
+}
+#home, #avatar {
+    z-index: 999;
+}
+
+#searchBar {
+    display: flex;
+    margin: 0px;
+    padding: 25px 0 15px 32px;
+    width: 100%;
+}
+#searchBar input, #searchBar button {
+    margin: 0;
+}
+#searchBar input {
+    border: 2px solid #eb5428;
+    width: 300px;
+}
+#searchBar button {
+    align-items: center;
+    background: #eb5428;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-color: #eb5428;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.nav input {
+    display: none;
+}
+.nav label {
+    width: 25%;
+}
+label span {
+    z-index: -1;
+    color: #eb5428;
+    display: block;
+    flex-direction: column;
+}
+
+.nav img {
+    z-index: -1;
+    position: absolute;
+}
+
+.nav svg:last-of-type {
+    stroke: #eb5428;
+}
+
+#fullMenu li:first-of-type svg, #searchBar svg {
+    background: #eb5428;
+    stroke: #ffffff;
+}
+
+#fullMenu {
+    justify-content: space-between;
+}
+
+#navmenu, #avatar {
+    display: flex;
+    justify-content: center;
+    width: 103.5px;
+    flex-direction: column;
+}
+#fullMenu div:first-of-type {
+    display: flex;
+    margin: 0;
+    padding: 5px 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+
+/* --------- MENU --------- */
+menu {
+    display: flex;
+    justify-content: space-between;
+}
+menu a {
+    color: #eb5428;
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* --------- STREET TACOS --------- */
+/* #tacos {
+
+} */
+
+#tacos img {
+    width: 100%;
+}
+#aboutTaco p {
+    padding: 10px;
+}
+
+
+
+/* --------- SHARED --------- */
+#details, #ingredients, #directions {
+    padding-bottom: 15px;
+}
+
+
+
+/* --------- DETAILS --------- */
+#details dl {
+    padding: 10px;
+    display: block;
+}
+#details dt, #details dd {
+    display: inline;
+}
+#details dd {
+    padding-left: 10px;
+}
+
+
+
+/* --------- INGREDIENTS / DIRECTIONS --------- */
+#ingredients ul, #directions ol {
+    padding: 10px 0 0 26px;
+}
+#ingredients li, #directions li {
+    padding: 6px;
+}
+#directions li {
+    padding-bottom: 10px;
+}
+
 
 
 /* --------- SIDES --------- */
 #sides {
     background-color: #7abfbf;
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.sideDish {
+    display: grid;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4,25%);
+    grid-template-areas: 
+        "pic name"
+        "pic descr"
+        "pic rating"
+        "pic stars";
+}
+.sideDish h3 {
+    display: grid;
+    grid-area: name;
+    justify-content: left;
+}
+.sideRating {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.sideRating dt {
+    display: grid;
+    grid-area: rating;
+}
+.sideRating dd {
+    grid-area: stars;
+}
+
+#sidesDisplay {
+    display: grid;
+    padding-top: 10px;
+}
+.sideDish h3 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.sideDish img {
+    position: relative;
+    top: 0px;
+    width: 130px;
+    float: left;
+    padding: 0 10px;
+    display: grid;
+    grid-area: pic;
+}
+.sideRating p {
+    margin: 0;
+    text-align: left;
+    display: grid;
+    grid-area: descr;
+}
+.sideRating dd {
+    padding-top: 5px;
 }
 
 /* >>> RATING / STARS FILL */
@@ -50,6 +324,36 @@ main {
 }
 #sides .four svg:last-child {
     fill: #ffffff;
+}
+
+
+
+/* --------- FOOTER --------- */
+footer {
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+#socials {
+    padding: 15px 5px 5px 5px;
+}
+#socials a {
+    transition: all 0.3s ease-in;
+}
+#taco-pyright {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+#taco-pyright img{
+    width: 40%;
+    margin: 0 auto;
+    order: -1;
+    padding: 5px;
+}
+#taco-pyright small {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -84,24 +388,351 @@ dt {
     font-weight: bold;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+p {
+    line-height: 2;
+}
+
+
+
+/* --------- HOVER --------- */
+#searchBar button:hover, #searchBar button svg:hover{
+    background: #ffffff;
+    stroke: #eb5428;
+}
+#avatar:hover, #avatar svg:hover{
+    background: #eb5428;
+    background-color: #eb5428;
+    stroke: #ffffff;
+    color: #ffffff;
+}
+#dropdown a:hover {
+    color: #ffffff;
+    background-color: #eb5428;
+}
+#tacoButtons menu a:hover {
+    background-color: #ffffff;
+}
+footer menu a:hover {
+    border: solid 3px #eb5428;
+    border-radius: 5px;
+}
 
 
 /* --------- HIDE --------- */
 .hideThis {
     visibility: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 
 
 /* --------- MEDIA QUERIES --------- */
 @media screen and (min-width: 834px/*temp*/) {
-    body {
+    body, header {
         width: 768px;
+    }
+    header {
+        z-index: 99;
+        background-color: #ffffff;
+        padding-bottom: 98px;
+        box-shadow: 0 1.5px 0px rgba(0,0,0,0.3);
+    }
+    main {
+        margin-top: 153px;
+    }
+
+    #tacoButtons menu a:hover {
+        background-color: rgba(255,255,255,0.5);
+    }    
+
+    #inGRIDirections {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    #ingredients {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #directions {
+        grid-column-start: 2;
+        grid-column-start: 2;
+    }
+    
+    .nav {
+        background-color: #ffffff;
+        box-shadow: 0 1.5px 0px rgba(0,0,0,0);
+    }
+    .nav label, .nav input {
+        visibility: hidden;
+    }
+    #fullMenu a {
+        padding: 10px;
+    }
+    #navmenu {
+        display: none;
+        position: absolute;
+    }
+    .nav img {
+        z-index: 1;
+        width: 50px;
+        margin: 0;
+        padding: 0;
+        position: static;
+    }
+    #dropdown {
+        display: flex;
+        width: 768px;
+        margin-top: 81px;
+        box-shadow: none;
+    }
+    #dropdown li {
+        display: flex;
+        /* padding: 15px 0; */
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+    #dropdown a {
+        align-items: center;
+    }
+    
+    #home, #avatar {
+        width: 10%;
+    }
+
+    #searchBar {
+        position: absolute;
+        top: 0px;
+        left: 38%;
+    }
+    
+    #tacos h1 {
+        float: left;
+        padding-left: 15px;
+    }
+    #tacoButtons menu {
+        position: absolute;
+        background-color: rgba(255,255,255,0.7);
+        width: 100%;
+    }
+    #tacoButtons a {
+        transition: all 0.2s ease-in;
+    }
+
+    #details dl {
+        text-align: center;
+    }
+
+    .sideDish img {
+        width: 130px;
+    }
+
+    #sidesDisplay {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /*
+    .sideDish h3 {
+        top: 10px;
+        position: relative;
+        text-align: left;
+    }
+    .sideRating {
+        padding-bottom: 10px;
+    } */
+
+
+    footer div {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 10px;
+    }
+    footer div section {
+        width: 50%;
     }
 }
 
+
 @media screen and (min-width: 1340px/*temp*/) {
-    body{
+    body, header {
         width: 1280px;
     }
+    
+    header {
+        padding: 0;
+    }
+    #searchBar {
+        position: absolute;
+        top: 100px;
+        left: 38%;
+    }
+
+    #inGRIDirections {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding-top: 10px;
+    }
+    
+    #tacos h1 {
+        float: none;
+    }
+    #editGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+    #editGrid #tacoButtons {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #editGrid #about {
+        grid-column-start: 2;
+    }
+    #tacoButtons menu a:hover, #tacoButtons menu svg:hover {
+        background-color: #eb5428;
+        color: #ffffff;
+        stroke: #ffffff;
+    }
+    
+    #tacoButtons {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 100%;
+        background-color: #ffffff;
+        overflow-y: auto;
+    }
+    #tacoButtons img {
+        display: block;
+        width: inherit;
+        height: inherit;
+    }
+    #tacoButtons menu {
+        display: block;
+        width: 100%;
+        position: relative;
+        background-color: #ffffff;
+        border: solid 2px #eb5428;
+        text-align: center;
+    }
+    #tacoButtons li {
+        width: 100px;
+    }
+    #tacoButtons img {
+        position: relative;
+        max-width: inherit;
+    }
+
+
+    #details {
+        background-color: #0d0d0d;
+        color: #7abfbf;
+        padding-top: 15px;
+    }
+    #details dl {
+        display: flex;
+    }
+    #details dt {
+        display: block;
+    }
+    #details dd {
+        padding: 0;
+    }
+
+    #sidesDisplay {
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .sideDish {
+        display: block;
+    }
+
+    #fullMenu {
+        justify-content: space-between;
+    }
+    #dropdown {
+        position: static;
+        margin-top: 0;
+        justify-content: center;
+    }
+    #dropdown li {
+        padding: 0;
+    }
+
+    #home, #avatar {
+        width: 90px;
+    }
+    
+    #taco-pyright {
+        display: flex;
+        flex-direction: row;
+    }
+    #taco-pyright img, #taco-pyright small {
+        margin: 0;
+    }
+    #taco-pyright img {
+        padding-left: 20px;
+    }
+    #taco-pyright small {
+        text-align: left;
+    }
 }
+
+
+
+
+/* >>> PRINT */
+@media print {
+    @page {
+        margin: 0.5in;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    main {
+        margin: 0;
+    }
+    header, nav, svg, menu, #searchBar input, #sides, footer {
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+    }
+    h1, h2, h3, nav a, nav span, menu li, #social li, footer, p, dd, li, nav, input, dt {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    menu a, span {
+        color: #000000;
+    }
+    img, svg {
+        filter: grayscale();
+        width: 100%;
+        height: auto;
+    }
+    #editGrid {
+        display: flex;
+    }
+    #inGRIDirections {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .breakafter {
+        page-break-after: always;
+    }
+
+}
+/* Add @media print styles to your CSS */
+/* 0.5 inch margins */
+/* serif font(s) */
+/* Images set not to display OR at grayscale */
+/* Do not display the nav */
+/* Replace hyperlinks with their full URL (when applicable) */
+/* Limit print to 1 page */

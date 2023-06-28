@@ -81,6 +81,7 @@ header {
     text-align: center;
     width: 25%;
     box-shadow: 2px 1.5px 0px rgba(0,0,0,0.4);
+    visibility: hidden; /* --- just couldn't get it to work, unfortunately / a bit pressed on time --- */
 }
 #dropdown li {
     background: #ffffff;
@@ -397,17 +398,30 @@ p {
 
 
 
+#fullMenu #dropdown {
+    background-color: #ffffff;
+}
+
+
+
 /* --------- HOVER --------- */
 #searchBar button:hover, #searchBar button svg:hover{
     background: #ffffff;
     stroke: #eb5428;
 }
-#avatar:hover, #avatar svg:hover{
+#avatar:hover, #avatar svg:hover {
     background: #eb5428;
     background-color: #eb5428;
     stroke: #ffffff;
     color: #ffffff;
+    cursor: pointer;
 }
+#menustyle:hover {
+    border: solid 2px #eb5428;
+    color: #eb5428;
+    cursor: pointer;
+}
+
 #dropdown a:hover {
     color: #ffffff;
     background-color: #eb5428;
@@ -416,9 +430,10 @@ p {
     background-color: #ffffff;
 }
 footer menu a:hover {
-    border: solid 3px #eb5428;
+    border: solid 3px rgba;
     border-radius: 5px;
 }
+
 
 
 /* --------- HIDE --------- */
@@ -488,6 +503,7 @@ footer menu a:hover {
         width: 768px;
         margin-top: 81px;
         box-shadow: none;
+        visibility: visible;
     }
     #dropdown li {
         display: flex;
@@ -644,10 +660,35 @@ footer menu a:hover {
 
     #sidesDisplay {
         display: flex;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     .sideDish {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .sideDish h3 {
+        display: flex;
+        margin: 0;
+        padding-left: 10px;
+        justify-content: center;
+        position: absolute;
+        bottom: 70px;
+    }
+    .sideDish img {
+        display: flex;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        padding-bottom: 40px;
+    }
+    .sideRating p {
+        padding-left: 10px;
+    }
+    .rating {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        
     }
 
     #fullMenu {
